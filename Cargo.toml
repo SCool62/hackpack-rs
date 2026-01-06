@@ -1,12 +1,12 @@
 [package]
 name = "hackpack"
 version = "0.1.0"
-authors = ["SCool62 <samthecool300@icloud.com>"]
+authors = ["SCool62"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [[bin]]
-name = "hackpack"
+name = "tank_plant"
 test = false
 bench = false
 
