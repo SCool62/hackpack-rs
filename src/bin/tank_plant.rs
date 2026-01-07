@@ -7,7 +7,7 @@ use arduino_hal::{
     prelude::*,
     simple_pwm::{IntoPwmPin, Prescaler, Timer0Pwm, Timer1Pwm, Timer2Pwm},
 };
-use hackpack::actuator::{drv8835::{Drv8835, MotorState}, servo::Servo};
+use hackpack::actuator::drv8835::{Drv8835, MotorState};
 
 use core::{panic::PanicInfo, u8};
 
