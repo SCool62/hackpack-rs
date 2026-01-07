@@ -7,3 +7,7 @@ runner = "ravedude"
 
 [unstable]
 build-std = ["core"]
+
+[alias]
+tank_build = "build --release --bin tank_plant"
+tank_run = "run --release --bin tank_plant"
