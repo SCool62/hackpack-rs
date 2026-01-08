@@ -28,13 +28,13 @@ where
         match state {
             MotorState::Forward(speed) => {
                 // Sets low to drive forward
-                self.left_dir_pin.set_low().map_err(|error| SetMotorStateError::DirError(error))?;
-                self.left_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(|error| SetMotorStateError::SpeedError(error))?;
+                self.left_dir_pin.set_low().map_err(SetMotorStateError::DirError)?;
+                self.left_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(SetMotorStateError::SpeedError)?;
 
             },
             MotorState::Backward(speed) => {
-                self.left_dir_pin.set_high().map_err(|error| SetMotorStateError::DirError(error))?;
-                self.left_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(|error| SetMotorStateError::SpeedError(error))?;
+                self.left_dir_pin.set_high().map_err(SetMotorStateError::DirError)?;
+                self.left_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(SetMotorStateError::SpeedError)?;
             }
         }
         Ok(())
@@ -44,13 +44,13 @@ where
         match state {
             MotorState::Forward(speed) => {
                 // Sets low to drive forward
-                self.right_dir_pin.set_low().map_err(|error| SetMotorStateError::DirError(error))?;
-                self.right_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(|error| SetMotorStateError::SpeedError(error))?;
+                self.right_dir_pin.set_low().map_err(SetMotorStateError::DirError)?;
+                self.right_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(SetMotorStateError::SpeedError)?;
 
             },
             MotorState::Backward(speed) => {
-                self.right_dir_pin.set_high().map_err(|error| SetMotorStateError::DirError(error))?;
-                self.right_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(|error| SetMotorStateError::SpeedError(error))?;
+                self.right_dir_pin.set_high().map_err(SetMotorStateError::DirError)?;
+                self.right_speed_pin.set_duty_cycle_fraction(speed as u16, 255).map_err(SetMotorStateError::SpeedError)?;
             }
         }
         Ok(())
