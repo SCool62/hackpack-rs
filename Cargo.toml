@@ -5,6 +5,12 @@ authors = ["SCool62"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
+[[bin]]
+name = "tank-plant"
+path = "src/bin/tank_plant.rs"
+test = false
+bench = false
+
 [dependencies]
 ufmt = "0.2.0"
 nb = "1.1.0"
