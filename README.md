@@ -1,16 +1,18 @@
-hackpack
+hackpack-rs
 ========
 
-Rust project for the _Arduino Nano New Bootloader_.
+WIP rewrite of the hackpack build box software in Rust. This code is intended to run on the stock hackpack Arduino Nanos.
 
 ## Build Instructions
 1. Install prerequisites as described in the [`avr-hal` README] (`avr-gcc`, `avr-libc`, `avrdude`, [`ravedude`]).
 
 2. Run `cargo build` to build the firmware.
+   > Note: I recommend adding the `--release` flag while building and running to ensure the binary is as small as possible
 
 3. Run `cargo run` to flash the firmware to a connected board.  If `ravedude`
    fails to detect your board, check its documentation at
    <https://crates.io/crates/ravedude>.
+   > Note: Each box will be a seperate binary. To run, use `cargo run --bin <NAME HERE>`
 
 4. `ravedude` will open a console session after flashing where you can interact
    with the UART console of your board.
