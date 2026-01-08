@@ -30,8 +30,8 @@ pub struct ServoConfig {
 }
 
 impl ServoConfig {
-    //! Creates a new servo configuration
-    //! Will return None if the minmum values are greater than or equal to the maximum values
+    /// Creates a new servo configuration
+    /// Will return None if the minmum values are greater than or equal to the maximum values
     pub fn new(max_duty: u8, min_duty: u8, min_angle: u8, max_angle: u8) -> Option<ServoConfig> {
         if (min_duty >= max_duty) || (min_angle >= max_angle) {
             return None;
