@@ -3,17 +3,14 @@
 
 use arduino_hal::{
     delay_ms,
-    hal::simple_pwm,
-    prelude::*,
-    simple_pwm::{IntoPwmPin, Prescaler, Timer0Pwm, Timer1Pwm, Timer2Pwm},
+    simple_pwm::{IntoPwmPin, Prescaler, Timer0Pwm, Timer1Pwm},
 };
 use hackpack::actuator::{drv8835::{Drv8835, MotorState}, servo::{Servo, ServoConfig}};
 
-use core::{panic::PanicInfo, u8};
+use core::panic::PanicInfo;
 
 use arduino_hal::default_serial;
 
-use embedded_hal::pwm::SetDutyCycle;
 
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
